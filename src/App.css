@@ -1,0 +1,23 @@
+.App {
+  height: 100vh;
+  text-align: center;
+
+  /* min-height: 100vh;*/
+  display: flex;  
+  flex-direction: column; 
+  font-size: calc(50px + 2vmin);
+  color: rebeccapurple;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Back{
+  background-color: ghostwhite;
+}
+
+.btn-success{
+  background-color: rebeccapurple;
+}
+
+

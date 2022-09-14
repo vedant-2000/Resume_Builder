@@ -1,0 +1,160 @@
+
+
+.Comp1 {
+ 
+  text-align: center;
+  
+  font-style:oblique;
+  font-weight: bold;
+ 
+  display: flex;  
+  flex-direction: column; 
+  font-size: calc(5px + 2vmin);
+  color: rebeccapurple;
+  justify-content: center;
+  align-items: left;
+}
+.Comp1>p{
+  margin: 2%;
+  text-align: center;
+}
+/* input{
+ 
+  color: rebeccapurple;
+  font-style: oblique;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  height: 8%;
+  text-align: center;
+  transition: all .5s;
+}
+::placeholder {
+  color: rebeccapurple;
+  opacity: 1; /* Firefox 
+}
+*/
+input {
+  text-align: center;
+  font-style: oblique;
+  color: rebeccapurple;
+  background: #FFF;
+  padding: .5rem 1rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  transition: all .5s;
+}
+input[type="file"]{
+  width:60%;
+  align-items: center;
+  margin: 2px;
+  height: 50px;
+}
+::placeholder {
+  font-style: oblique;
+  color: rebeccapurple;
+  opacity: 0.5; /* Firefox */
+}
+input:focus {
+  text-align: center;
+  text-decoration: rebeccapurple;
+  color: rebeccapurple;
+  width: 90%;
+  top: 0;
+  right: 100%;
+}
+
+.basic_details{
+  justify-content: center;
+}
+input[name="Subjects"], input[name="Board"], input[name="Marks"] {
+  text-align: center;
+  font-style: oblique;
+  color: rebeccapurple;
+  background: #FFF;
+  padding: .5rem 1rem;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 40px;
+  outline: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 6px;
+  transition: all .5s;
+}
+input[name="Subjects"]:focus, input[name="Board"]:focus, input[name="Marks"]:focus{
+  width:100%;
+}
+.quali>table{
+  
+  color: rebeccapurple;
+  font-size: calc(5px + 2vmin);
+  font-style: oblique;
+  
+}
+.quali>table>.lefty{
+  text-align: left;
+ 
+
+  
+}
+.quali>p{
+  font-size: small;
+}
+
+
+
+.Back{
+  background-color: ghostwhite;
+}
+
+.btn-success{
+  background-color: rebeccapurple;
+}
+
+
+input[type="file"]::file-selector-button {
+  border: 2px solid #6c5ce7;
+  padding: 0.2em 0.4em;
+  border-radius: 0.2em;
+  background-color: #a29bfe;
+  transition: all .5s;
+  
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+ 
+}
+input[type="date"]::before {
+  
+	color: rebeccapurple;
+  opacity: 0.5;
+	content: attr(placeholder);
+}
+input[type="date"] {
+	color: #ffffff;
+}
+input[type="date"]:focus,
+input[type="date"]:valid {
+	color: rebeccapurple;
+
+}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+	content: "" !important;
+}
+@media (max-width: 700px) {
+.justify-content-around{
+  flex-wrap:wrap ;
+}
+}
