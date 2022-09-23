@@ -1,0 +1,118 @@
+/* 
+@page {
+  size: 21cm 29.7cm;
+  margin: 30mm 45mm 30mm 45mm;}
+   /* change the margins as you want them to be. */
+   html {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+@media print {
+  body{
+    transform: scale(.9);
+      width: 21cm;
+      height: 29.7cm;
+      
+     
+     
+      /* margin: 30mm 30mm 30mm 30mm;  */
+      /* change the margins as you want them to be. */
+  } 
+  #printPageButton {
+    display: none;
+  }
+}
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.right{
+  text-align: right;
+  margin-left: 70%;
+}
+.Comp2 {
+ 
+  text-align: center;
+  
+  font-style:oblique;
+  font-weight: bold;
+ 
+  display: flex;  
+  flex-direction: column; 
+  font-size: calc(5px + 2vmin);
+  color: black;
+  justify-content: center;
+  align-items: left;
+}
+.Comp2_1 {
+ 
+  text-align: right;
+  
+  font-style:oblique;
+  font-weight: bold;
+ 
+  display: flex;  
+  flex-direction: column; 
+ 
+  
+  justify-content: center;
+  align-items: left;
+}
+.Comp2_2 {
+ 
+  text-align: left;
+  
+  font-style:oblique;
+  font-weight: bold;
+ 
+  display: flex;  
+  flex-direction: column; 
+ 
+
+  justify-content: center;
+  align-items: left;
+}
+.Comp2_3 {
+ 
+  text-align: left;
+  
+  font-style:oblique;
+  font-weight: bold;
+ 
+  
+ 
+ 
+
+}
+.Comp2_3 {
+ 
+  margin-left: 2px;
+  
+  
+
+}
+.Comp2_3_4>h5 {
+ 
+  color:gray;
+  
+
+}
+.lastDec{
+  text-align: right;
+
+}
+.vl {
+  border-left: 6px solid gray;
+
+}
+hr.new1 {
+  border-top: 4px solid gray;
+}

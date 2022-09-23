@@ -6,7 +6,7 @@ import Comp2 from './Comp2';
 export const UserContext = React.createContext();
 let data;
 function Comp1() {
- 
+  const [Photo, setPhoto] = useState({photo:"", sign:""});
   const [Name, setName] = useState({Name:""})
   const [Email, setEmail] = useState({Email:""})
   const [Mob, setMob] = useState({Mobile:""})
@@ -19,21 +19,19 @@ function Comp1() {
   const [Hobby, setHobby] = useState({Hobbies:""})
   const [Basic, setBasic] = useState({ FName: "", MName: "", DOB: "", MS:"",LK:"",HT:"" })
   const [Exp, setExp] = useState({CName: null, DName: null, Exp: null})
-  const [AllExp, setAllExp] = useState([]);
+ 
   const navigate=useNavigate();
   function handleSubmit() {
-   
-    data=[ Name, Email,Mob, Carrer, Secondary,Srsecondary,bachelor,masters,Skill,Hobby,Basic, AllExp]
-    console.log(data);
-   
     
-
-
-     <Comp2 data={data} />
-     navigate("/tobeprinted");
+    data=[ Photo, Name, Email,Mob, Carrer, Secondary,Srsecondary,bachelor,masters,Skill,Hobby,Basic, Exp]
+  
+    
+   return(
 
     
-   
+     navigate("/tobeprinted")
+    
+   )
   }
   function handleChange(evt) {
     const value = evt.target.value;
@@ -77,12 +75,13 @@ function Comp1() {
       [evt.target.name]: value
     });
   }
-  function handleChange6() {
+
+  function handleChange7(evt) {
   
-    setAllExp([
-    ...AllExp,
-      Exp
-    ]);
+    let value = URL.createObjectURL(evt.target.files[0]);
+    setPhoto({
+      ...Photo,
+      [evt.target.name]:value});
  
   }
 
@@ -95,12 +94,14 @@ function Comp1() {
         <div className='img col-md-6 m-1 '>
           <div className='row'>
             <div className='col-6 pos'>
-              <input type="file"  accept="image/*" multiple /><br />
-              Upload Your Passport Size Photo
+            <input className="form-control" name="photo" type="file" id="image"  onChange={handleChange7} required />             
+            {Photo.photo && <img src={Photo.photo} alt="Not Available" width="220rem" height="200rem"></img>}
+             {!Photo.photo && <p> Upload Your Passport Size Photo</p>}
             </div>
             <div className='col-6 pos'>
-              <input type="file"   accept="image/*" multiple /><br />
-              Upload Your Signature Photo
+            <input className="form-control" name="sign" type="file" id="image"  onChange={handleChange7} required />             
+            {Photo.sign && <img src={Photo.sign} alt="Not Available" width="220rem" height="200rem"></img>}
+             {!Photo.sign && <p> Upload Your Signature</p>}
             </div>
           </div>
         </div>
@@ -178,23 +179,15 @@ function Comp1() {
       </div>
       <div className='col-md-12'>
         Enter Your Work Experience
-        {AllExp.CName!==null && AllExp.map((Exp)=>{
-
-
-        
-       <div className='d-flex justify-content-around'>
-        <div>{Exp.CName}</div>
-        <div>{Exp.DName}</div>
-        <div>{Exp.Exp}</div>
-        </div>})}
+       
         <div className='col-md-12 d-flex justify-content-around p-2 m-1'>
       
        
       <input type="text" name="CName" value={Exp.CName} placeholder='Enter Company Name' onChange={handleChange5}></input>
       <input type="text" name="DName" value={Exp.DName}  placeholder='Enter Designation / Job Description' onChange={handleChange5}></input>
-     <input type="tel" name="Exp" placeholder='Enter Experience in Years' value={Exp.Exp}  onChange={handleChange5}></input>
+     <input type="tel" name="Exp" placeholder='Enter Experience in Months' value={Exp.Exp}  onChange={handleChange5}></input>
        </div>
-       <button type="button" className="btn btn-success" onClick={handleChange6}>Add More Experience</button>    
+     
       </div>
 
 
@@ -224,5 +217,6 @@ function Comp1() {
   )
 }
 
-export default Comp1;
+export default Comp1; 
 export {data};
+

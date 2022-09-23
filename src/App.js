@@ -5,7 +5,7 @@ import {BrowserRouter as Router,Routes, Route, Link} from 'react-router-dom';
 import Home from './Home';
 import Comp2 from './Comp2';
 function App() {
-  alert("Please Full Resume Details Then Click Submit Otherwise All Data Get Erased")
+  // alert("Please Full Resume Details Then Click Submit Otherwise All Data Get Erased")
   return (
   
    <>
