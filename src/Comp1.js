@@ -6,6 +6,7 @@ import Comp2 from './Comp2';
 export const UserContext = React.createContext();
 let data;
 function Comp1() {
+  window.alert("Please upload photo and sign first then fill all the details to get better resume")
   const [Photo, setPhoto] = useState({photo:"", sign:""});
   const [Name, setName] = useState({Name:""})
   const [Email, setEmail] = useState({Email:""})
