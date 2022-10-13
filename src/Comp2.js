@@ -2,7 +2,7 @@ import React from 'react';
 import './Comp2.css';
 import { data } from './Comp1';
 const Comp2 = () => {
-	console.log(data);
+	window.alert("Please set Margins in Print as None not as Default for Better Setting")
 function handlePrint (){
 	window.print();
 }
